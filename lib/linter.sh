@@ -1311,7 +1311,7 @@ BuildFileList()
   #################################################################################
   # Switch codebase back to the default branch to get a list of all files changed #
   #################################################################################
-  SWITCH_CMD=$(cd "$GITHUB_WORKSPACE" || exit; git pull --quiet; git checkout "$DEFAULT_BRANCH" 2>&1)
+  SWITCH_CMD=$(cd "$GITHUB_WORKSPACE" || exit; git pull --quiet; git checkout --no-guess "$DEFAULT_BRANCH" 2>&1)
 
   #######################
   # Load the error code #
